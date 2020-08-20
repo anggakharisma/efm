@@ -17,6 +17,7 @@ function App() {
 					event: any,
 					{ drives, os }: { drives: []; os: string }
 				) => {
+					console.log(drives)
 					setDrives(drives)
 					setOsType(os)
 				}
@@ -25,16 +26,13 @@ function App() {
 		getDriveList()
 	}, [])
 
-	const getMountPoint = (): Array<string> => {
-		return ['a']
-	}
-
 	return (
 		<>
 			{drives &&
 				drives.map((item: any, index) => {
 					return <h1 key={index}>{item.enumerator}</h1>
 				})}
+			<h1>{osType}</h1>
 		</>
 	)
 }
