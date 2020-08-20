@@ -1,0 +1,26 @@
+#frame {
+	-webkit-app-region: drag;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	width: 100%;
+	background: red;
+	justify-content: space-between;
+	align-content: center;
+	padding: 8px;
+
+	h4 {
+		margin: 0;
+	}
+
+	ul {
+		-webkit-app-region: no-drag;
+		margin: 0;
+		li {
+			display: inline-block;
+			margin: 0 8px;
+		}
+	}
+}

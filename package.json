@@ -1,0 +1,59 @@
+{
+	"name": "efm",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@craco/craco": "^5.6.4",
+		"@testing-library/jest-dom": "^4.2.4",
+		"@testing-library/react": "^9.5.0",
+		"@testing-library/user-event": "^7.2.1",
+		"@types/drivelist": "^6.4.1",
+		"@types/jest": "^24.9.1",
+		"@types/node": "^12.12.54",
+		"@types/react": "^16.9.46",
+		"@types/react-dom": "^16.9.8",
+		"concurrently": "^5.3.0",
+		"drivelist": "^9.1.0",
+		"electron": "^9.2.1",
+		"electron-builder": "^22.8.0",
+		"electron-is-dev": "^1.2.0",
+		"electron-rebuild": "^1.11.0",
+		"electronmon": "^1.1.2",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-scripts": "^3.4.1",
+		"sass": "^1.26.10",
+		"typescript": "^3.9.7",
+		"wait-on": "^5.2.0"
+	},
+	"scripts": {
+		"start": "concurrently \"npm run react-serve\" \"wait-on http://localhost:3000 && npm run electron-start\"",
+		"build": "npm run react-build && npm run electron-build",
+		"test": "craco test",
+		"eject": "craco eject",
+		"release": "npm run react-build && npm run electron-release",
+		"electron-start": "electronmon .",
+		"electron-build": "electron-builder",
+		"electron-release": "electron-builder --publish=always",
+		"react-start": "craco start",
+		"react-build": "craco build",
+		"react-serve": "set BROWSER=none&&npm run react-start"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"main": "public/electron-main.js",
+	"homepage": "./"
+}
