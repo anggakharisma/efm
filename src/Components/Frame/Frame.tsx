@@ -38,7 +38,7 @@ export default function Frame() {
 			<h4>{titlebar}</h4>
 			<ul>
 				<li onClick={minimizeWindow}>-</li>
-				<li onClick={toggleWindow}>Toggle</li>
+				<li onClick={toggleWindow}>+</li>
 				<li onClick={closeApp}>x</li>
 			</ul>
 		</div>
