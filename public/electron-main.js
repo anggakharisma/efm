@@ -6,6 +6,7 @@ const drivelist = require('drivelist')
 
 const createWindow = () => {
 	const mainWindow = new BrowserWindow({
+		frame: false,
 		width: 1280,
 		height: 720,
 		backgroundColor: '#FFF',
