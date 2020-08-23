@@ -17,7 +17,6 @@ function App() {
 					event: any,
 					{ drives, os }: { drives: []; os: string }
 				) => {
-					console.log(drives)
 					setDrives(drives)
 					setOsType(os)
 				}
