@@ -9,6 +9,7 @@ const createWindow = () => {
 		frame: false,
 		width: 1280,
 		height: 720,
+		minWidth: 800,
 		backgroundColor: '#FFF',
 		webPreferences: {
 			devTools: isDev,
