@@ -1,10 +1,13 @@
 #sidebar {
     position: absolute;
+    top: 0;
     left: 0;
     width: 240px;
     padding: 16px;
-    background: red;
-    height: 89vh;
+    padding-top: 40px;
+    background: #575757;
+    color: #ffffff;
+    height: 100vh;
 
     .content {
         position: absolute;
