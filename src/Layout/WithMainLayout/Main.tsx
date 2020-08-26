@@ -11,14 +11,13 @@ export default function withMainLayout<T>(
 ) {
 	return (props: T) => (
 		<>
+            <Header />
 			<ContentWrapper>
 				<Frame />
-				<Header />
 				<Sidebar />
 				<ContentMain>
 					<Component {...props} />
 				</ContentMain>
-				<Footer />
 			</ContentWrapper>
 		</>
 	)

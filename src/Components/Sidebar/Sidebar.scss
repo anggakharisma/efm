@@ -1,0 +1,19 @@
+#sidebar {
+    position: absolute;
+    left: 0;
+    width: 240px;
+    padding: 16px;
+    background: red;
+    height: 89vh;
+
+    .content {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%); 
+    }
+
+    h1 {
+        display: inline-block;
+        font-size: 2em;
+    }
+}

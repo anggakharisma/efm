@@ -1,5 +1,10 @@
+import './Header.scss'
 import React from 'react'
 
 export default function Header() {
-	return <h1>Header</h1>
+	return (
+        <div id="header">
+            <h1>Header / Toolbar</h1>
+        </div>
+    )
 }
