@@ -1,13 +1,12 @@
 import './FolderItem.scss';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {FolderType} from '../../types';
 
 export default function FolderItem(props: FolderType) {
-    useEffect(() => {
-
-    }, []);
     return (
-        <div className="folder-item" onDoubleClick={ () => console.log("Clicked") }>
+        <div className={props.hash ? "folder-item selected": "folder-item"}
+            onClick={props.clickFunc}
+        >
             <h1>ICON</h1>
             <h3>{ props.name }</h3>
         </div>

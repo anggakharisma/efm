@@ -25,6 +25,8 @@ export interface Drive {
 
 export interface FolderType {
     name: string;
+    clickFunc: (e: any) => void;
+    hash: string;
 }
 
 export interface ContentWrapperType {
