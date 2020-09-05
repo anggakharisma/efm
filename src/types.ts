@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export interface Drive {
     enumerator: string,
     busType: string,
@@ -19,4 +21,16 @@ export interface Drive {
     isSCSI: boolean,
     isUSB: boolean,
     isUAS: boolean,
+}
+
+export interface FolderType {
+    name: string;
+}
+
+export interface ContentWrapperType {
+	children: ReactNode
+}
+
+export interface FolderWrapperType {
+	children: ReactNode
 }

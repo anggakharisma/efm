@@ -1,0 +1,9 @@
+.folder-item {
+    &:hover {
+        background: white;
+        color: black;
+    }
+    h1, h3 {
+        text-align: center;
+    }
+}

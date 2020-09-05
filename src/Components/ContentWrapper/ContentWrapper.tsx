@@ -1,10 +1,7 @@
 import './ContentWrapper.scss'
-import React, { ReactNode } from 'react'
+import React from 'react'
+import {ContentWrapperType} from '../../types'
 
-interface IContentWrapper {
-	children: ReactNode
-}
-
-export default function ContentWrapper(props: IContentWrapper) {
+export default function ContentWrapper(props: ContentWrapperType) {
 	return <div id='content-wrapper'>{props.children}</div>
 }

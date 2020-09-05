@@ -1,37 +1,37 @@
 import './Stylesheets/App.scss'
 
 import os from 'os';
-import React, { useState } from 'react'
+import fs from 'fs';
+import React, { useState, useEffect } from 'react'
 
 import withMainLayout from './Layout/WithMainLayout/Main'
-import {Drive} from './types';
-import useDriveList from './Hooks/useDriveList';
+import FolderItem from './Components/FolderItem/FolderItem';
+import Folder from './Components/Folder/Folder';
 
 
 function App() {
-	const driveList = useDriveList();
+    const [homeDir, setHomeDir] = useState<any>([]);
 
-    const DriveList = () => {
-        let mountPoints: any = [];
-        switch(os.type()) {
-            case "Linux":
-                if(driveList[0] !== undefined) console.log(driveList[0].mountpoints);
-                break;
-
-        }
-        return (
-            <>
-                <h1>ICON</h1>
-
-                <h1>HOME</h1>
-                <h3>{ os.homedir() }</h3>
-            </>
-        )
-    }
+    useEffect(() => {
+        fs.readdirSync(os.homedir()).forEach(file => {
+          setHomeDir((homeDir: any) => [...homeDir, file]);
+        });
+    }, []);
 
 	return (
 		<>
-            <DriveList />
+            <h1>HOME</h1>
+            <Folder>
+                { 
+                    homeDir.map((item: any, id: any) => {
+                        const pattern = /^[^.]+$/g;
+                        return pattern.test(item) ? (
+                                <FolderItem name={item} key={id} />
+                        ) : '';
+                            
+                    })
+                }
+            </Folder>
 		</>
 	)
 }
