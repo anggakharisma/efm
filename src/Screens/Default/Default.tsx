@@ -1,5 +1,7 @@
-import os from 'os';
-import fs from 'fs';
+import './Default.scss';
+
+import { homedir } from 'os';
+import { readdirSync } from 'fs';
 import React, { useState, useEffect } from 'react'
 
 import withMainLayout from '../../Layout/WithMainLayout/Main'
@@ -14,13 +16,13 @@ function Default() {
     const [folderSelected, setFolderSelected] = useState<any>([]);
 
     useEffect(() => {
-        fs.readdirSync(os.homedir()).forEach(file => {
+        readdirSync(homedir()).forEach(file => {
           setHomeDir((homeDir: any) => [...homeDir, file]);
         });
     }, []);
 
 	return (
-		<>
+		<div id="default">
             <h1>HOME</h1>
             <Folder>
                 { 
@@ -42,7 +44,7 @@ function Default() {
                     })
                 }
             </Folder>
-		</>
+		</div>
 	)
 }
 
