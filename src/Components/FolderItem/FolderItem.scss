@@ -1,16 +1,18 @@
 .folder-item {
-    padding: 8px;
-    &:hover {
-        cursor: pointer;
-    }
-    &.selected {
-        background: white;
-        color: black;
-    }
-    img { width: 72px }
-    h4 { 
-        font-size: 0.85em; 
-        margin: 8px 0 0 0;
-    }
-    text-align: center;
+	padding: 8px;
+	&:hover {
+		cursor: pointer;
+	}
+	&.selected {
+		background: white;
+		color: black;
+	}
+	img {
+		width: 56px;
+	}
+	h4 {
+		font-size: 0.85em;
+		margin: 8px 0 0 0;
+	}
+	text-align: center;
 }

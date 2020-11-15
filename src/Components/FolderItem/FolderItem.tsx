@@ -8,7 +8,7 @@ export default function FolderItem(props: FolderType) {
         <div className={props.hash ? "folder-item selected": "folder-item"}
             onClick={props.clickFunc}
         >
-            <img src={FolderIcon} width="30" /> 
+            <img src={FolderIcon} /> 
             <h4>{ props.name }</h4>
         </div>
     )

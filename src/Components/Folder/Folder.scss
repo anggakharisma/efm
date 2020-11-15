@@ -1,7 +1,8 @@
 .folder {
-    display: grid;
-    align-items: center;
-    place-items: center;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+	display: grid;
+	align-items: center;
+	place-items: center;
+	width: 100%;
+	grid-gap: 8px 4px;
+	grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
