@@ -7,15 +7,16 @@ const drivelist = require('drivelist')
 const createWindow = () => {
 	const mainWindow = new BrowserWindow({
 		frame: false,
+		minWidth: 800,
+		minHeight: 600,
 		width: 1280,
 		height: 720,
-		minWidth: 800,
 		backgroundColor: '#FFF',
 		webPreferences: {
 			devTools: isDev,
 			nodeIntegration: true,
-            enableRemoteModule: true,
-            worldSafeExecuteJavaScript: true
+			enableRemoteModule: true,
+			worldSafeExecuteJavaScript: true
 		}
 	})
 

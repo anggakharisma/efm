@@ -3,10 +3,10 @@ import React from 'react'
 
 export default function Sidebar() {
 	return (
-        <div id="sidebar">
-            <div className="content">
-                <h1>Sidebar</h1>
-            </div>
-        </div>
-    )
+		<div id='sidebar'>
+			<div className='content'>
+				<h2>Sidebar</h2>
+			</div>
+		</div>
+	)
 }

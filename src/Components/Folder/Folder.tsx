@@ -1,7 +1,7 @@
 import './Folder.scss'
 import React from 'react'
-import {FolderWrapperType} from '../../types'
+import { FolderWrapperType } from '../../types'
 
-export default function Folder(props: FolderWrapperType) {
+export default function FolderWrapper(props: FolderWrapperType) {
 	return <div className='folder'>{props.children}</div>
 }
