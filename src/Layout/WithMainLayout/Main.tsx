@@ -11,7 +11,7 @@ export default function withMainLayout<T>(
 ) {
 	return (props: T) => (
 		<>
-            <Header />
+			<Header />
 			<ContentWrapper>
 				<Frame />
 				<Sidebar />
@@ -19,6 +19,7 @@ export default function withMainLayout<T>(
 					<Component {...props} />
 				</ContentMain>
 			</ContentWrapper>
+			<Footer />
 		</>
 	)
 }
