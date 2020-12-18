@@ -2,11 +2,11 @@ import './Default.scss'
 
 import { homedir } from 'os'
 import { readdirSync } from 'fs'
+import crypto from 'crypto'
 import React, { useState, useEffect } from 'react'
 
 import withMainLayout from '../../Layout/WithMainLayout/Main'
 import FolderItem from '../../Components/FolderItem/FolderItem'
-import crypto from 'crypto'
 import FolderWrapper from '../../Components/Folder/Folder'
 
 // Default screen
