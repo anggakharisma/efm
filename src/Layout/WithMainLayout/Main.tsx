@@ -18,6 +18,7 @@ export default function withMainLayout<T>(
 				<ContentMain>
 					<Component {...props} />
 				</ContentMain>
+        <Footer />
 			</ContentWrapper>
 		</>
 	)
