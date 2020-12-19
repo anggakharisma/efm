@@ -4,8 +4,8 @@ import React from 'react'
 export default function Header() {
 	return (
         <div id="header">
-            <h1>Back</h1>
-            <h1>Forward</h1>
+            <h6>Back</h6>
+            <h6>Forward</h6>
         </div>
     )
 }
