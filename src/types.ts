@@ -36,3 +36,5 @@ export interface ContentWrapperType {
 export interface FolderWrapperType {
 	children: ReactNode
 }
+
+export interface HomeDirType {}
