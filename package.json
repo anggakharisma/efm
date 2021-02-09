@@ -26,7 +26,7 @@
 		"react-scripts": "^3.4.1",
 		"sass": "^1.26.10",
 		"typescript": "^3.9.7",
-		"wait-on": "^5.2.0"
+		"wait-on": "^5.2.1"
 	},
 	"scripts": {
 		"start": "concurrently \"npm run react-serve\" \"wait-on http://localhost:3000 && npm run electron-start\"",

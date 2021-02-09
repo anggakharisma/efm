@@ -1,6 +1,6 @@
 module.exports = {
 	"arrowParens": "avoid",
-	"endOfLine": "crlf",
+	"endOfLine": "lf",
 	"jsxSingleQuote": true,
 	"semi": false,
 	"singleQuote": true,
